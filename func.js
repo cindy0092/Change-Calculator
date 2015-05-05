@@ -1,4 +1,3 @@
-var obj = {};
 var penny = 1;
 var nickel = 5;
 var dime = 10;
@@ -12,6 +11,7 @@ var hundred = 10000;
 var counter = 0;
 function numCal(num){
     num = num * 100;
+    var obj = {};
     if(num >= hundred){
         counter = Math.floor(num/hundred);
         obj.Hundred = counter;
