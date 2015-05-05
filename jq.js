@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	var $form, input, result;
+	var para = document.getElementsByTagName("p");
+	var change = document.getElementById('change');
 	$form = $('#calculator');
 	$('form input[type="number"]').on('blur', function() { // When input loses focus
 	  console.log('You entered ', this.value );          // Write value to console
@@ -12,7 +14,7 @@ $(document).ready(function(){
 	  // The message only shows if user has not entered a number
 	  //console.assert($.isNumeric(result), 'User entered non-numeric value');
 	  for(var key in result){
-		var para = $form.append('<p id="change">' + key + ": "+ result[key] + '</p>');
+		$form.append('<p id="change">' + key + ": "+ result[key] + '</p>');
 	  }
 	});
 

@@ -19,8 +19,10 @@ function numCal(num){
         counter = 0;
     }
     if(num >= fifty){
-        obj.fifty = 1;
-        num -= fifty;
+        counter = Math.floor(num/fifty);
+        obj.Fifty = counter;
+        num -= counter*fifty;
+        counter = 0;
     }
     if(num >= twenty){
         counter = Math.floor(num/twenty);
@@ -35,8 +37,10 @@ function numCal(num){
         counter = 0;
     }
     if(num >= five){
-        obj.Five = 1;
-        num -= five;
+        counter = Math.floor(num/five);
+        obj.Five = counter;
+        num -= counter*five;
+        counter = 0;
     }
     if(num >= one){
         counter = Math.floor(num/one);
@@ -63,7 +67,7 @@ function numCal(num){
         counter = 0;
     }
     if(num >= penny){
-    counter = num/penny;
+    counter = Math.floor(num/penny);
     obj.Penny = counter;
     num -= counter*penny;
     counter = 0;
